@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "ADT",
+    "version": "0.1.0",
+    "description": "auto download",
+    "action": {
+        "default_title": "Login Automation",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://mccivcmm.com/login.php"],
+            "js": ["content.js"]
+        }
+    ],
+    "host_permissions": [
+        "https://*/*"
+    ]
+}
